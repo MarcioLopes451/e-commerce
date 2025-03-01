@@ -1,7 +1,8 @@
 function Ad() {
   return (
-    <div className="w-full text-center bg-black text-white py-2">
-        Sign up and get 20% off to your first order. <span className="underline hover:cursor-pointer">Sign Up Now</span>
+    <div className="w-full bg-black text-white py-2 grid grid-cols-[1fr_7fr_1fr]">
+        <span className="col-start-2 place-self-center">Sign up and get 20% off to your first order. <span className="underline hover:cursor-pointer">Sign Up Now</span></span>
+        <span className="col-start-3">X</span>
     </div>
   )
 }
