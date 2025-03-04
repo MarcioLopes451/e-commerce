@@ -3,9 +3,9 @@ import HeroImg from "./HeroImg"
 import HeroText from "./HeroText"
 function HeroBanner() {
   return (
-    <div className="border-solid border-2 border-black flex">
+    <div className="">
         <HeroText />
-        <HeroImg />        
+        {/* <HeroImg />         */}
     </div>
   )
 }
