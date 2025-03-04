@@ -1,11 +1,13 @@
 import Ad from "../components/ad/Ad"
+import HeroBanner from "../components/hero_banner/HeroBanner"
 import Navbar from "../components/navbar/Navbar"
 
 function Home() {
   return (
     <div className="w-screen">
         <Ad />
-            <Navbar />
+        <Navbar />
+        <HeroBanner />
     </div>
   )
 }
