@@ -4,7 +4,7 @@ function HeroText() {
   return (
     <div className="w-full flex flex-col gap-4 px-4 pt-8 bg-[#F0F0F0]">
         <div className="">
-            <img src={BANNERTEXT}  alt="" />
+            <img src={BANNERTEXT}  alt=""/>
         </div>
         <div className="Satoshi text-[12px] text-[400]">
             <span className="text-[rgba(0,0,0,0.6)]">

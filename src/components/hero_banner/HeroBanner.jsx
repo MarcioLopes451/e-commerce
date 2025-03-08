@@ -3,9 +3,9 @@ import HeroImg from "./HeroImg"
 import HeroText from "./HeroText"
 function HeroBanner() {
   return (
-    <div className="">
+    <div className="bg-[#F2F0F1]">
         <HeroText />
-        {/* <HeroImg />         */}
+        <HeroImg />        
     </div>
   )
 }
