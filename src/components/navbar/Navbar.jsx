@@ -6,13 +6,12 @@ import BURGER from "../../assets/mobile/burgerMenu.png"
 import { Search } from "lucide-react"
 import { ChevronDown } from "lucide-react";
 
-import { isMobile } from "../../lib/util";
 
 import NavSearchbar from "./NavSearchbar";
+
 function Navbar() {
-    console.log(isMobile())
   return (
-    <div className="h-14 sm:h-24 flex justify-between sm:justify-center items-center gap-[40px]">
+    <div className="h-14 sm:h-24 flex justify-between sm:justify-center items-center gap-[40px] sm:py-16">
             <div className="flex gap-4 pl-4 sm:hidden">
                 <img src={BURGER} alt="" />
                 <img src={SHOPCO} alt="" />

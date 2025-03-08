@@ -1,5 +1,4 @@
 import { Search } from "lucide-react"
-import { getDimension } from "../../lib/util"
 
 function NavSearchbar() {
     return (
