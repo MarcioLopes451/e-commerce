@@ -1,14 +1,14 @@
-import React, { useState, useEffect } from "react";
-import ProductCard from "../components/products/ProductCard";
+import React, { useState, useEffect } from 'react';
+import ProductCard from '../components/products/ProductCard';
 
 const url =
-  "https://asos2.p.rapidapi.com/products/v2/list?store=US&offset=0&categoryId=7616&country=US&sort=freshness&currency=USD&sizeSchema=US&limit=48&lang=en-US";
+  'https://asos2.p.rapidapi.com/products/v2/list?store=US&offset=0&categoryId=7616&country=US&sort=freshness&currency=USD&sizeSchema=US&limit=48&lang=en-US';
 
 const options = {
-  method: "GET",
+  method: 'GET',
   headers: {
-    "x-rapidapi-key": "7aaf7a79demsh2835010c2347247p12fdd5jsn0d2b76ba88f2",
-    "x-rapidapi-host": "asos2.p.rapidapi.com",
+    'x-rapidapi-key': '7aaf7a79demsh2835010c2347247p12fdd5jsn0d2b76ba88f2',
+    'x-rapidapi-host': 'asos2.p.rapidapi.com',
   },
 };
 
@@ -31,7 +31,7 @@ export default function ProductPage() {
     fetchProducts();
   }, []);
 
-  //console.log(data);
+  // console.log(data);
 
   const lastIndex = page * itemsPerPage;
   const firstIndex = lastIndex - itemsPerPage;
@@ -64,6 +64,8 @@ export default function ProductPage() {
                 : item.name
             }
             price={item.price.current.text}
+            additionalImageUrls={item.additionalImageUrls}
+            color={item.colour}
           />
         ))}
       </div>
