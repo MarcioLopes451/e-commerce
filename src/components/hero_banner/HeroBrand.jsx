@@ -3,6 +3,7 @@ import ZARA from "../../assets/desktop/zara.png"
 import PRADA from "../../assets/desktop/prada.png"
 import GUCCI from "../../assets/desktop/gucci.png"
 import VERSACE from "../../assets/desktop/versace.png"
+
 function HeroBrand() {
   return (
     <div className='py-4 bg-black flex flex-wrap justify-center gap-2 sm:h-36 sm:items-center sm:justify-evenly'>
