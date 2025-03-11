@@ -4,7 +4,7 @@ import Navbar from "../components/navbar/Navbar"
 
 function Home() {
   return (
-    <div className="w-screen">
+    <div className="font-satoshi w-screen">
         <Ad />
         <Navbar />
         <HeroBanner />

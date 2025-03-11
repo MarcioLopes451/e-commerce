@@ -1,10 +1,10 @@
-import BANNERTEXT from "../../assets/mobile/bannerText.png"
-
 function HeroText() {
   return (
     <div className="w-full flex flex-col gap-4 sm:gap-8 px-4 pt-8 bg-[#F2F0F1] sm:p-28 sm:h-3/4 sm:w-3/5 sm:absolute sm:z-10 sm:left-30 sm:bg-transparent">
         <div className="md:h-4/5">
-            <img src={BANNERTEXT}  alt="" className="bg-cover h-full"/>
+            <div className="font-inter text-4xl font-black sm:text-8xl">
+                FIND CLOTHES THAT MATCHES YOUR STYLE
+            </div>
         </div>
         <div className="Satoshi text-[12px] text-[400]">
             <span className="text-[rgba(0,0,0,0.6)] sm:text-[16px]">
