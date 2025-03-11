@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from "react";
 import ProductCard from "../components/products/ProductCard";
+import filterImg from "../mobile/5957020_filter_sort_icon.png";
+import Filter from "../components/filter/Filter";
 
 const url =
   "https://asos2.p.rapidapi.com/products/v2/list?store=US&offset=0&categoryId=7616&country=US&sort=freshness&currency=USD&sizeSchema=US&limit=48&lang=en-US";
@@ -13,6 +15,7 @@ const options = {
 };
 
 export default function ProductPage() {
+  const [open, setOpen] = useState(false);
   const [data, setData] = useState([]);
   const [page, setPage] = useState(1);
   const itemsPerPage = 6;
@@ -50,10 +53,17 @@ export default function ProductPage() {
     }
   };
 
+  const handleOpen = () => {
+    setOpen((prev) => !prev);
+  };
+
   return (
-    <section className="px-[16px]">
-      <h1>Shirts and Vests</h1>
-      <div className="mt-10 flex flex-row flex-wrap items-center justify-between ">
+    <section className="px-[16px] relative">
+      <div className="flex justify-between">
+        <h1>Shirts and Vests</h1>
+        <img src={filterImg} onClick={handleOpen} />
+      </div>
+      <div className="mt-10 flex flex-row flex-wrap items-center justify-between">
         {sliceItems.map((item) => (
           <ProductCard
             key={item.id}
@@ -88,6 +98,7 @@ export default function ProductPage() {
           </button>
         </div>
       </section>
+      <section>{open && <Filter />}</section>
     </section>
   );
 }
