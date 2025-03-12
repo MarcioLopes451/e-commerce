@@ -1,12 +1,7 @@
-<<<<<<< HEAD
-import React, { useState, useEffect } from "react";
-import ProductCard from "../components/products/ProductCard";
-import filterImg from "../mobile/5957020_filter_sort_icon.png";
-import Filter from "../components/filter/Filter";
-=======
 import React, { useState, useEffect } from 'react';
 import ProductCard from '../components/products/ProductCard';
->>>>>>> 13b4e9325e22aaa1de2a4025cf60db4ecaa23951
+import filterImg from '../mobile/5957020_filter_sort_icon.png';
+import Filter from '../components/filter/Filter';
 
 const url =
   'https://asos2.p.rapidapi.com/products/v2/list?store=US&offset=0&categoryId=7616&country=US&sort=freshness&currency=USD&sizeSchema=US&limit=48&lang=en-US';
