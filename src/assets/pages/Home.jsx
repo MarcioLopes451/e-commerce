@@ -1,13 +1,5 @@
-import Ad from "../components/ad/Ad"
-import Navbar from "../components/navbar/Navbar"
-
 function Home() {
-  return (
-    <div className="w-screen">
-        <Ad />
-            <Navbar />
-    </div>
-  )
+  return <div className="w-screen"></div>;
 }
 
-export default Home
+export default Home;
