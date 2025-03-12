@@ -6,7 +6,6 @@ import Home from "./pages/Home.jsx";
 import ProductPage from "./pages/ProductPage.jsx";
 import ProductDetailPage from "./pages/ProductDetailPage.jsx";
 import { EcommerceLayout } from "./assets/layout/EcommerceLayout.jsx";
-import ProductDetailPage from "./pages/ProductDetailPage.jsx";
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
