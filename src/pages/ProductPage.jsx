@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import ProductCard from "../components/products/ProductCard";
-import filterImg from "../mobile/5957020_filter_sort_icon.png";
+import filterImg from "../assets/mobile/5957020_filter_sort_icon.png";
 import Filter from "../components/filter/Filter";
 
 const url =
