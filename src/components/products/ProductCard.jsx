@@ -25,10 +25,7 @@ export default function ProductCard({
               state={productDetails}
               className="outline-none"
             >
-              <span
-                aria-hidden="true"
-                className="absolute inset-0 bg-red-100/20"
-              ></span>
+              <span aria-hidden="true" className="absolute inset-0"></span>
               {name}
             </Link>
           </h3>
