@@ -1,5 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import ProductCard from '../components/products/ProductCard';
+<<<<<<< HEAD:src/pages/ProductPage.jsx
+=======
+import filterImg from '../mobile/5957020_filter_sort_icon.png';
+import Filter from '../components/filter/Filter';
+>>>>>>> 8b4799c1126cd571e4ae8dd458f8a3f6aeecd941:src/assets/pages/ProductPage.jsx
 
 const url =
   'https://asos2.p.rapidapi.com/products/v2/list?store=US&offset=0&categoryId=7616&country=US&sort=freshness&currency=USD&sizeSchema=US&limit=48&lang=en-US';
