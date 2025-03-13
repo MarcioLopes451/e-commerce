@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import ProductCard from "../components/products/ProductCard";
 import filterImg from "../assets/mobile/5957020_filter_sort_icon.png";
 import Filter from "../components/filter/Filter";
+import BackDrop from "../components/backdrop/BackDrop";
 
 const url =
   "https://asos2.p.rapidapi.com/products/v2/list?store=US&offset=0&categoryId=7616&country=US&sort=freshness&currency=USD&sizeSchema=US&limit=48&lang=en-US";
@@ -34,8 +35,6 @@ export default function ProductPage() {
     fetchProducts();
   }, []);
 
-  // console.log(data);
-
   const lastIndex = page * itemsPerPage;
   const firstIndex = lastIndex - itemsPerPage;
   const sliceItems = data.slice(firstIndex, lastIndex);
@@ -58,12 +57,22 @@ export default function ProductPage() {
   };
 
   return (
-    <section className="px-[16px] relative">
-      <div className="flex justify-between">
-        <h1>Shirts and Vests</h1>
-        <img src={filterImg} onClick={handleOpen} />
+    <section className="relative">
+      <div className="flex justify-between items-center px-[16px]">
+        <div>
+          <h1 className="text-[24px] font-bold">T-Shirts</h1>
+          <p className="text-[14px]">
+            Showing {firstIndex + 1}-{Math.min(lastIndex, data.length)} out of{" "}
+            {data.length} products
+          </p>
+        </div>
+        <img
+          src={filterImg}
+          onClick={handleOpen}
+          className="w-[25px] h-[25px] rounded-[50px] bg-[#F0F0F0]"
+        />
       </div>
-      <div className="mt-10 flex flex-row flex-wrap items-center justify-between">
+      <div className="mt-10 flex flex-row flex-wrap items-center justify-between px-[16px]">
         {sliceItems.map((item) => (
           <ProductCard
             key={item.id}
@@ -100,7 +109,8 @@ export default function ProductPage() {
           </button>
         </div>
       </section>
-      <section>{open && <Filter />}</section>
+      <section>{open && <Filter onclose={handleOpen} />}</section>
+      <section>{open && <BackDrop onclose={handleOpen} />}</section>
     </section>
   );
 }
